@@ -2,7 +2,7 @@ import pytest
 import pandas as pd
 from unittest.mock import patch
 
-from src.utils import load_operations_data  # путь поправь под свой проект
+from src.utils import load_operations_data
 
 
 @patch('pandas.read_excel')
