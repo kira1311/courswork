@@ -7,8 +7,8 @@ from src.utils import analyze_data, fetch_data_from_api, load_operations_data, p
 def home_page_function(datetime_str: str) -> str:
     """Основная функция для страницы «Главная»"""
     try:
-        parse_datetime(datetime_str)
-        api_data = fetch_data_from_api()
+        dt = parse_datetime(datetime_str)
+        api_data = fetch_data_from_api(dt)
         processed_data = analyze_data(api_data)
         operations_data = load_operations_data("data/operations.json")
         response = {
