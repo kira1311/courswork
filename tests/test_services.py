@@ -1,6 +1,7 @@
 import json
-import pandas as pd
 from unittest.mock import patch
+
+import pandas as pd
 
 from src.services import load_operations_data, simple_search
 

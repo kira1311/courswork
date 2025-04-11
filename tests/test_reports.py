@@ -1,5 +1,7 @@
-import pandas as pd
 import json
+
+import pandas as pd
+
 from src.reports import get_expenses_by_weekday
 
 

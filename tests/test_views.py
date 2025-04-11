@@ -1,14 +1,10 @@
-import pytest
-import pandas as pd
-from unittest.mock import patch
 from datetime import datetime
+from unittest.mock import patch
 
-from src.views import (
-    parse_datetime,
-    fetch_data_from_api,
-    analyze_data,
-    load_operations_data
-)
+import pandas as pd
+import pytest
+
+from src.views import analyze_data, fetch_data_from_api, load_operations_data, parse_datetime
 
 
 def test_parse_datetime_valid():
