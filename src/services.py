@@ -1,8 +1,8 @@
 import json
 import logging
-import pandas as pd
 from typing import Any
 
+import pandas as pd
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

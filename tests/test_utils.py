@@ -1,6 +1,7 @@
-import pytest
-import pandas as pd
 from unittest.mock import patch
+
+import pandas as pd
+import pytest
 
 from src.utils import load_operations_data
 
