@@ -1,5 +1,6 @@
 import json
 from datetime import datetime
+import pandas as pd
 
 from src.utils import analyze_data, fetch_data_from_api, load_operations_data, parse_datetime
 
@@ -10,14 +11,14 @@ def home_page_function(datetime_str: str) -> str:
         dt = parse_datetime(datetime_str)
         api_data = fetch_data_from_api(dt)
         processed_data = analyze_data(api_data)
-        operations_data = load_operations_data("data/operations.json")
+        operations_data = pd.read_excel("data/operations.xlsx")
+
         response = {
             "status": "success",
             "data": {
                 "api_data": api_data,
                 "processed_data": processed_data,
-                "operations_data": operations_data.to_dict(orient='records') if hasattr(operations_data,
-                                                                                        'to_dict') else operations_data
+                "operations_data": operations_data.to_dict(orient='records')
             },
             "timestamp": datetime.now().isoformat()
         }
